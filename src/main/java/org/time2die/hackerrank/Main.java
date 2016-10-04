@@ -18,8 +18,8 @@ public class Main {
     private int countDeletedNum(String string) {
         int countCharToDelete = 0;
         StringBuilder sb = new StringBuilder(string);
-        for (int i = 0; i < sb.length(); ) {
-            if (i+1 == sb.length()) {
+        for (int i = 0; i < sb.length() ; ) {
+            if (i + 1 == sb.length()) {
                 break;
             }
 
