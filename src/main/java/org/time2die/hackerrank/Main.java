@@ -16,7 +16,22 @@ public class Main {
     }
 
     private int countDeletedNum(String string) {
-        return 0;
+        int countCharToDelete = 0 ;
+        StringBuilder sb = new StringBuilder(string) ;
+        for (int i = 0; i < sb.length(); ) {
+            if(i == sb.length()){
+                break;
+            }
+
+            if(sb.charAt(i) != sb.charAt(i+1)) {
+                i++;
+            }else {
+             sb.deleteCharAt(i+1) ;
+                countCharToDelete ++ ;
+            }
+
+        }
+        return countCharToDelete;
     }
 
     private String[] getFakeData() {
